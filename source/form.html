@@ -1,12 +1,109 @@
 <!DOCTYPE html>
 <html lang="ru">
 
-<head>
+<head class="page">
   <meta charset="utf-8">
   <title>HTML Academy: Кэт энерджи</title>
 </head>
 
-<body>
+<body class="page__body">
+
+  <header class="page-header">
+    <div class="wrapper">
+      <a class="page-header__logo" href="index.html"><img src="img/logo-minimal.svg" width="191" height="37"
+          alt="Логотип Cat Energy"></a>
+      <button class="page-header__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+      <nav class="main-nav">
+        <ul class="main-nav__list">
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="index.html">Главная</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="catalog.html">Каталог продукции</a>
+          </li>
+          <li class="main-nav__item main-nav__item--current">
+            <a class="main-nav__link" href="#">Подбор программы</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <form class="form" action="https://echo.htmlacademy.ru" method="POST">
+      <h1 class="form__title">Подбор программы</h1>
+      <fieldset>
+        <legend class="form__text">Заполните анкету, и мы подберем программу питания для вашего кота</legend>
+        <label for="name-cat">Имя:*</label>
+        <input id="name-cat" type="text" name="name-cat" required value="Барсик">
+        <label for="weight-cat">Вес(кг):*</label>
+        <input id="weight-cat" type="number" name="weight-cat" required value="7">
+        <label for="age-cat">Возраст(лет):</label>
+        <input id="age-cat" type="number" name="age-cat" value="7">
+      </fieldset>
+      <fieldset>
+        <input id="slim" type="radio" name="radio" checked>
+        <label for="slim">Похудение</label>
+        <input id="powerful" type="radio" name="radio">
+        <label for="powerful">Набор массы</label>
+        <input id="recommendation" type="radio" name="radio">
+        <label for="recommendation">Не знаю (нужен ваш совет)</label>
+      </fieldset>
+      <fieldset class="form__subtitle">Контактные данные (владельца кота)
+        <label for="email">E-mail:*</label>
+        <input id="email" type="email" name="email" required value="kuklachev@gmail.com">
+        <label for="phone">Телефон:*</label>
+        <input id="phone" type="tel" name="phone" required value="8 (960) 900-60-90">
+      </fieldset>
+      <fieldset class="form__subtitle">Комментарий
+        <textarea id="comment" name="comment">Расскажите обо всех повадках кота</textarea>
+      </fieldset>
+      <fieldset class="form__subtitle">Дополнительно
+        <input id="sugar-substitute" type="checkbox" name="sugar-substitute" checked>
+        <label for="sugar-substitute">Сахарозаменитель</label>
+        <input id="water" type="checkbox" name="water">
+        <label for="water">Питьевая вода</label>
+        <input id="milk" type="checkbox" name="milk">
+        <label for="milk">Молоко</label>
+        <input id="vitamins" type="checkbox" name="vitamins">
+        <label for="vitamins">Витамины</label>
+      </fieldset>
+      <button type="submit">Отправить заявку</button>
+      <p class="form__sub-text">* - Обязательные поля</p>
+    </form>
+    <section class="location">
+      <div class="wrapper">
+        <div class="location__wrapper">
+          <h3 class="location__title">Приглашаем к сотрудничеству дилеров!</h3>
+          <p class="location__text">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+        </div>
+      </div>
+      <div class="location__map"></div>
+    </section>
+  </main>
+
+  <footer class="page-footer">
+    <div class="page-footer__wrapper wrapper">
+      <a class="page-footer__logo" href="index.html"><img src="img/footer-logo-minimal.svg" width="128" height="24"
+          alt="логотип Cat Energy"></a>
+      <ul class="page-footer__social-list">
+        <li class="page-footer__social-item">
+          <a class="page-footer__social-link" href="#" aria-label="Cat Energy во Вконтакте"><img
+              src="img/icon_vkontakte.svg" width="23" height="16" alt="Иконка Вконтакте"></a>
+        </li>
+        <li class="page-footer__social-item">
+          <a class="page-footer__social-link" href="#" aria-label="Cat Energy в Инстаграме"><img
+              src="img/icon_instagram.svg" width="16" height="16" alt="Иконка Инстаграм"></a>
+        </li>
+        <li class="page-footer__social-item">
+          <a class="page-footer__social-link" href="#" aria-label="Cat Energy в Фейсбуке"><img
+              src="img/icon_facebook.svg" width="22" height="22" alt="Иконка Фейсбук"></a>
+        </li>
+      </ul>
+      <a class="page-footer__copyright" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy <img
+          src="img/htmlacademy.svg" width="34" height="34" alt="логотип HTML Academy"></a>
+    </div>
+  </footer>
+
 </body>
 
 </html>
