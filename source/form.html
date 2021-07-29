@@ -4,6 +4,7 @@
 <head class="page">
   <meta charset="utf-8">
   <title>HTML Academy: Кэт энерджи</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body class="page__body">
@@ -29,47 +30,49 @@
     </div>
   </header>
   <main>
+    <div class="wrapper">
     <form class="form" action="https://echo.htmlacademy.ru" method="POST">
       <h1 class="form__title">Подбор программы</h1>
-      <fieldset>
+      <fieldset class="fieldset">
         <legend class="form__text">Заполните анкету, и мы подберем программу питания для вашего кота</legend>
-        <label for="name-cat">Имя:*</label>
-        <input id="name-cat" type="text" name="name-cat" required value="Барсик">
-        <label for="weight-cat">Вес(кг):*</label>
-        <input id="weight-cat" type="number" name="weight-cat" required value="7">
-        <label for="age-cat">Возраст(лет):</label>
-        <input id="age-cat" type="number" name="age-cat" value="7">
+        <label class="label" for="name-cat">Имя:*</label>
+        <input class="input" id="name-cat" type="text" name="name-cat" required value="Барсик">
+        <label class="label" for="weight-cat">Вес(кг):*</label>
+        <input class="input" id="weight-cat" type="number" name="weight-cat" required value="7">
+        <label class="label" for="age-cat">Возраст(лет):</label>
+        <input class="input" id="age-cat" type="number" name="age-cat" value="7">
       </fieldset>
-      <fieldset>
-        <input id="slim" type="radio" name="radio" checked>
-        <label for="slim">Похудение</label>
-        <input id="powerful" type="radio" name="radio">
-        <label for="powerful">Набор массы</label>
-        <input id="recommendation" type="radio" name="radio">
-        <label for="recommendation">Не знаю (нужен ваш совет)</label>
+      <fieldset class="fieldset">
+        <input class="input-radio" id="slim" type="radio" name="radio" checked>
+        <label class="label" for="slim">Похудение</label>
+        <input class="input-radio" id="powerful" type="radio" name="radio">
+        <label class="label" for="powerful">Набор массы</label>
+        <input class="input-radio" id="recommendation" type="radio" name="radio">
+        <label class="label" for="recommendation">Не знаю (нужен ваш совет)</label>
       </fieldset>
-      <fieldset class="form__subtitle">Контактные данные (владельца кота)
-        <label for="email">E-mail:*</label>
-        <input id="email" type="email" name="email" required value="kuklachev@gmail.com">
-        <label for="phone">Телефон:*</label>
-        <input id="phone" type="tel" name="phone" required value="8 (960) 900-60-90">
+      <fieldset class="form__subtitle fieldset">Контактные данные (владельца кота)
+        <label class="label" for="email">E-mail:*</label>
+        <input class="input" id="email" type="email" name="email" required value="kuklachev@gmail.com">
+        <label class="label" for="phone">Телефон:*</label>
+        <input class="input" id="phone" type="tel" name="phone" required value="8 (960) 900-60-90">
       </fieldset>
-      <fieldset class="form__subtitle">Комментарий
-        <textarea id="comment" name="comment">Расскажите обо всех повадках кота</textarea>
+      <fieldset class="form__subtitle fieldset">Комментарий
+        <textarea class="input-textarea" id="comment" name="comment">Расскажите обо всех повадках кота</textarea>
       </fieldset>
-      <fieldset class="form__subtitle">Дополнительно
-        <input id="sugar-substitute" type="checkbox" name="sugar-substitute" checked>
-        <label for="sugar-substitute">Сахарозаменитель</label>
-        <input id="water" type="checkbox" name="water">
-        <label for="water">Питьевая вода</label>
-        <input id="milk" type="checkbox" name="milk">
-        <label for="milk">Молоко</label>
-        <input id="vitamins" type="checkbox" name="vitamins">
-        <label for="vitamins">Витамины</label>
+      <fieldset class="form__subtitle fieldset">Дополнительно
+        <input class="input-checkbox" id="sugar-substitute" type="checkbox" name="sugar-substitute" checked>
+        <label class="label" for="sugar-substitute">Сахарозаменитель</label>
+        <input class="input-checkbox" id="water" type="checkbox" name="water">
+        <label class="label" for="water">Питьевая вода</label>
+        <input class="input-checkbox" id="milk" type="checkbox" name="milk">
+        <label class="label" for="milk">Молоко</label>
+        <input class="input-checkbox" id="vitamins" type="checkbox" name="vitamins">
+        <label class="label" for="vitamins">Витамины</label>
       </fieldset>
-      <button type="submit">Отправить заявку</button>
+      <button class="form__button" type="submit">Отправить заявку</button>
       <p class="form__sub-text">* - Обязательные поля</p>
     </form>
+    </div>
     <section class="location">
       <div class="wrapper">
         <div class="location__wrapper">
