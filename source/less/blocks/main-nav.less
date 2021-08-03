@@ -1,5 +1,24 @@
 .main-nav__list {
   list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 10px;
+  }
+}
+//  @media (min-width: @desktop-width) {
+
+.main-nav__item {
+  padding: 22px;
+  border-bottom: 1px solid @line-index;
+
+  @media (min-width: @tablet-width) {
+    border: none;
+  }
 }
 
 .main-nav__link {
@@ -9,4 +28,15 @@
   line-height: 20px;
   text-transform: uppercase;
   text-decoration: none;
+
+  @media (min-width: @tablet-width) {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }

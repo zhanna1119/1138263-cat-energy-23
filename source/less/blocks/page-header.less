@@ -1,0 +1,29 @@
+.page-header__wrapper {
+  min-width: 320px;
+  max-width: 1440px;
+  margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+  }
+
+  @media (min-width: @desktop-width) {
+    justify-content: space-between;
+    position: absolute;
+    width: 100%;
+  }
+}
+
+.page-header__wrapper-logo {
+  padding: 24px 30px;
+
+  @media (min-width: @desktop-width) {
+    z-index: 2;
+  }
+}
+
+.page-header__toggle {
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}

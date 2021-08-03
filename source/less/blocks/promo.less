@@ -1,24 +1,76 @@
+.promo__wrapper {
+  box-sizing: border-box;
+  min-width: 280px;
+  max-width: 1440px;
+  margin: 0 20px;
+
+  @media (min-width: @tablet-width) {
+    margin: 0 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 0 110px;
+  }
+}
+
 .promo__card {
   background-color: @background;
+  padding: 30px 33px 18px 19px;
+
+  @media (min-width: @tablet-width) {
+    padding: 77px 53px 53px 55px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 82px 40px 70px 40px;
+  }
 }
 
 .promo__title {
+  margin: 0;
   font-size: 24px;
   line-height: 37px;
+  font-weight: 400;
   text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    font-size: 36px;
+    line-height: 36px;
+    padding-bottom: 24px;
+  }
+
+  @media (min-width: @desktop-width) {
+    text-align: center;
+  }
 }
 
 .promo__text {
   font-family: "Arial", "Helvetica", sans-serif;
   font-size: 14px;
   line-height: 18px;
+  font-weight: 400;
   color: @text;
+
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+  }
 }
 
 .promo__button {
+  display: block;
   font-size: 16px;
   line-height: 16px;
+  font-weight: 400;
   text-transform: uppercase;
   text-decoration: none;
   color: #000000;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+    padding-top: 48px;
+  }
 }
