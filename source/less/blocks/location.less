@@ -1,12 +1,29 @@
 .location {
+  min-width: 280px;
+  max-width: 1220px;
   background: @background;
+
+  @media (min-width: @desktop-width) {
+    position: relative;
+  }
 }
 
 .location__title {
   font-size: 16px;
   line-height: 20px;
+  font-weight: 400;
   text-transform: uppercase;
   color: #111111;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 21px;
+    padding-right: 148px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-right: 40px;
+  }
 }
 
 .location__text {
@@ -14,8 +31,45 @@
   font-size: 14px;
   line-height: 20px;
   color: @text;
+
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    line-height: 20px;
+    padding-left: 147px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 40px;
+  }
 }
 
 .location__index {
   background: #ffffff;
+}
+
+.location__wrapper {
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+
+  @media (min-width: @tablet-width) {
+    padding: 50px 71px;
+    justify-content: space-around;
+  }
+
+  @media (min-width: @desktop-width) {
+    position: absolute;
+    z-index: 1;
+    background: #ffffff;
+    top: 95px;
+    width: 570px;
+    padding: 66px 70px;
+  }
+}
+
+.location__map-iframe {
+  width: 100%;
+  height: 362px;
+  border: none;
 }

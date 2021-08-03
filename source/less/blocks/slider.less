@@ -1,6 +1,29 @@
+.slider {
+  @media (min-width: @desktop-width) {
+    background: linear-gradient(to right, @background 60%, @background-dark 40%);
+    margin-top: 70px;
+    padding-bottom: 64px;
+  }
+}
+
+
 .slider__toggle {
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
   color: #000000;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+.slider__toggle-wrapper {
+  display: flex;
+  justify-content: space-around;
+
+  @media (min-width: @desktop-width) {
+    padding-top: 20px;
+  }
 }

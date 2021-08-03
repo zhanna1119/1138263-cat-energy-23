@@ -2,10 +2,12 @@
 
 @import (less) "global/normalize.css";
 @import "global/fonts.less";
+@import "global/visually-hidden.less";
 
 // Blocks
 
-@import "blocks/page__body.less";
+@import "blocks/page.less";
+@import "blocks/page-header.less";
 @import "blocks/main-nav.less";
 @import "blocks/intro.less";
 @import "blocks/promo.less";
@@ -23,9 +25,14 @@
 @import "blocks/input-checkbox.less";
 @import "blocks/input-textarea.less";
 @import "blocks/slider.less";
-@import "blocks/wrapper.less";
 
-// Variables
+// Viewports
+
+@tablet-width: 768px;
+@desktop-width: 1440px;
+@mobile-width-only: 767px;
+
+// Variables colors
 
 @primary: #68b738; // basic_green
 @primary-hover: #5eaa2f; // basic_green-2
