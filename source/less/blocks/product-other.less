@@ -1,12 +1,22 @@
 .product-other__title {
   font-size: 24px;
-  font-weight: 400;
   line-height: 24px;
   color: #000000;
+
+  @media (min-width: @desktop-width) {
+    font-size: 36px;
+    line-height: 36px;
+  }
 }
 
 .product-other__list {
   list-style: none;
+  padding: 0;
+  margin: 0;
+
+  @media (min-width: @desktop-width) {
+    flex-grow: 3/1;
+  }
 }
 
 .product-other__subtitle {
@@ -14,6 +24,11 @@
   line-height: 16px;
   text-transform: uppercase;
   color: @title-catalog-card;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+  }
 }
 
 .product-other__amount,
@@ -22,6 +37,11 @@
   font-size: 14px;
   line-height: 14px;
   color: @text;
+
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    line-height: 20px;
+  }
 }
 
 .product-other__button {
@@ -32,6 +52,22 @@
   background: @primary;
   padding: 10px 109px;
   text-decoration: none;
+
+  @media (min-width: @tablet-width) {
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 7px 27px;
+  }
+}
+
+.product-other__gift {
+  @media (min-width: @desktop-width) {
+    width: 289px;
+  }
 }
 
 .product-other__gift-text {
@@ -41,6 +77,40 @@
   text-align: center;
   color: #ffffff;
   padding: 168px 61px 43px 58px;
-  background-image: url("../../img/product-other-min.jpg");
+  background-image: url("../img/product-other-min.jpg");
   background-repeat: no-repeat;
+}
+
+.product-other__about {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+  @media (min-width: @tablet-width) {
+    justify-content: flex-end;
+  }
+
+  @media (min-width: @desktop-width) {
+    justify-content: space-around;
+  }
+}
+
+.product-other__item {
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr min-content;
+  }
+}
+
+.product-other__wrapper {
+  @media (min-width: @desktop-width) {
+    display: flex;
+    justify-content: space-between;
+  }
 }
