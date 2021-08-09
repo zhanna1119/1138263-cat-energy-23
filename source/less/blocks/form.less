@@ -1,19 +1,51 @@
 .form__title {
   font-size: 36px;
-  font-weight: 400;
   line-height: 36px;
   color: #000000;
+  font-weight: 400;
+  margin-top: 27px;
+  margin-bottom: 37px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+    padding-left: 40px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 72px;
+    margin-bottom: 56px;
+  }
 }
 
 .form__text {
   font-size: 14px;
   line-height: 18px;
   text-transform: uppercase;
+  margin-bottom: 27px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+    padding-left: 40px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 54px;
+  }
 }
 
 .form__subtitle {
   font-size: 24px;
   line-height: 26px;
+  margin-bottom: 23px;
+  padding-top: 23px;
+  color: #000000;
+
+  @media (min-width: @tablet-width) {
+    font-size: 36px;
+    line-height: 36px;
+  }
 }
 
 .form__button {
@@ -24,6 +56,16 @@
   background: @primary;
   padding: 7px 44px;
   border: none;
+  width: 100%;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    width: 282px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 568px;
+  }
 }
 
 .form__sub-text {
@@ -32,4 +74,34 @@
   line-height: 16px;
   color: #000000;
   text-align: center;
+
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 80px;
+  }
+}
+
+.form__button-wrapper {
+  @media (min-width: @tablet-width) {
+    padding-left: 40px;
+    padding-right: 37px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 72px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    justify-content: flex-start;
+  }
+}
+
+.form__column-wrapper {
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
 }

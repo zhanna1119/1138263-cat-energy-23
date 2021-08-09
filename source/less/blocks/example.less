@@ -1,12 +1,16 @@
 .example__wrapper {
-  box-sizing: border-box;
-  min-width: 280px;
-  max-width: 1220px;
-  padding: 27px 20px 25px 20px;
-  margin: 0 auto;
+  padding: 27px 0 25px 0;
+}
 
+.example__content {
   @media (min-width: @tablet-width) {
-    padding: 0 30px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
   }
 }
 
@@ -15,21 +19,16 @@
 
   @media (min-width: @tablet-width) {
     background: linear-gradient(to bottom, #ffffff 60%, @background-dark 40%);
-    display: flex;
-    flex-wrap: wrap;
   }
 
   @media (min-width: @desktop-width) {
-    background: #ffffff;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    background: @background;
   }
 }
 
 .example__title {
   font-size: 36px;
   line-height: 40px;
-  font-weight: 400;
   color: #000000;
   margin-bottom: 33px;
 
@@ -48,7 +47,6 @@
   font-family: "Arial", "Helvetica", sans-serif;
   font-size: 14px;
   line-height: 18px;
-  font-weight: 400;
   color: @text;
 
   @media (min-width: @tablet-width) {
@@ -65,7 +63,6 @@
 .example__numbers {
   font-size: 24px;
   line-height: 24px;
-  font-weight: 400;
   color: #000000;
 
   @media (min-width: @tablet-width) {
@@ -107,7 +104,6 @@
 .example__subtitle {
   font-size: 14px;
   line-height: 20px;
-  font-weight: 400;
   text-align: center;
   text-transform: uppercase;
   color: #000000;
