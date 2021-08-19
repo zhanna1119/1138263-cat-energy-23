@@ -1,22 +1,47 @@
+.main-nav {
+  position: relative;
+}
+
 .main-nav__list {
   list-style: none;
   padding: 0;
   margin: 0;
   text-align: center;
 
+  @media (max-width: @mobile-width-only) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    background-color: #ffffff;
+    width: 100%;
+  }
+
   @media (min-width: @tablet-width) {
     display: flex;
     padding-top: 10px;
   }
 }
-//  @media (min-width: @desktop-width) {
 
 .main-nav__item {
-  padding: 15px;
+  padding: 22px 20px 24px 20px;
   border-bottom: 1px solid @line-index;
 
   @media (min-width: @tablet-width) {
     border: none;
+    padding-bottom: 10px;
+  }
+}
+
+.main-nav__item--current {
+  @media (min-width: @tablet-width) {
+    border-bottom: 2px solid @primary;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    border-bottom: 2px solid #ffffff;
   }
 }
 
@@ -28,6 +53,14 @@
   text-transform: uppercase;
   text-decoration: none;
 
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
   @media (min-width: @tablet-width) {
     font-weight: 400;
     font-size: 18px;
@@ -37,5 +70,70 @@
   @media (min-width: @desktop-width) {
     font-size: 20px;
     line-height: 30px;
+    color: #ffffff;
+  }
+}
+
+.main-nav__toggle {
+  position: absolute;
+  top: -60px;
+  right: 50px;
+  z-index: 2;
+  display: block;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  border: none;
+  background-color: #ffffff;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+.main-nav--closed .main-nav__toggle::before {
+  content: "";
+  position: absolute;
+  width: 24px;
+  height: 2px;
+  background-color: #000000;
+  box-shadow: 0 8px 0 0 #000000, 0 16px 0 0 #000000;
+}
+
+.main-nav--closed .main-nav__toggle:active::before {
+  background-color: fade(#000000, 30%);
+  box-shadow:
+    0 8px 0 0 fade(#000000, 30%),
+    0 16px 0 0 fade(#000000, 30%);
+}
+
+.main-nav--opened .main-nav__toggle {
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    width: 24px;
+    height: 2px;
+    background-color: #000000;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+    box-shadow: none;
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+
+  &:active::before,
+  &:active::after {
+    background-color: fade(#000000, 30%);
+  }
+}
+
+.main-nav--closed .main-nav__item {
+  @media (max-width: @mobile-width-only) {
+    display: none;
   }
 }

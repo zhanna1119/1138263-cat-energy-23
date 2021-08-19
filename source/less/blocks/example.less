@@ -1,121 +1,257 @@
-.example__wrapper {
-  padding: 27px 0 25px 0;
+.example {
+  position: relative;
+  padding-top: 29px;
+  background-color: @background;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 43px;
+    background-color: transparent;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 213px;
+    background-image: linear-gradient(to bottom, #ffffff, #ffffff 213px, @background 213px, @background);
+  }
 }
 
-.example__content {
-  @media (min-width: @tablet-width) {
+.example__layout {
+  @media (min-width: @desktop-width) {
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
   }
-
-  @media (min-width: @desktop-width) {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-  }
 }
 
-.example {
-  background: @background-dark;
+.example__title-block {
+  margin: 0 0 36px;
 
   @media (min-width: @tablet-width) {
-    background: linear-gradient(to bottom, #ffffff 60%, @background-dark 40%);
+    margin: 0 0 64px;
   }
 
   @media (min-width: @desktop-width) {
-    background: @background;
+    width: 100%;
+    position: relative;
+    padding: 78px 0 75px;
+    margin-top: -213px;
+    margin-bottom: 0;
+    z-index: 0;
+
+    ::before {
+      content: "";
+      position: absolute;
+      display: block;
+      top: 0;
+      left: 50%;
+      bottom: 0;
+      width: 100vw;
+      z-index: -1;
+      background-color: #ffffff;
+      transform: translateX(-50%);
+    }
   }
 }
 
 .example__title {
   font-size: 36px;
-  line-height: 40px;
-  color: #000000;
-  margin-bottom: 33px;
+  font-weight: 400;
+  line-height: 36px;
+  margin: 0;
+  color: #111111;
 
   @media (min-width: @tablet-width) {
     font-size: 60px;
     line-height: 60px;
-    margin-bottom: 146px;
   }
 
   @media (min-width: @desktop-width) {
-    margin-bottom: 50px;
+    max-width: 50%;
+  }
+}
+
+.example__info-block {
+  margin-bottom: 35px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 51px;
+  }
+
+  @media (min-width: @desktop-width) {
+    position: relative;
+    width: 450px;
+    margin: 0;
+    padding-top: 72px;
+    padding-bottom: 75px;
   }
 }
 
 .example__text {
-  font-family: "Arial", "Helvetica", sans-serif;
+  margin: 0;
   font-size: 14px;
   line-height: 18px;
+  font-family: "Arial", sans-serif;
   color: @text;
+}
+
+.example__number {
+  margin-top: 24px;
 
   @media (min-width: @tablet-width) {
-    font-size: 16px;
-    line-height: 24px;
+    display: flex;
+    flex-direction: row;
+    margin-top: 53px;
   }
 
   @media (min-width: @desktop-width) {
-    margin: 0;
-    padding-top: 70px;
+    display: block;
+    width: 366px;
+    margin-top: 67px;
   }
 }
 
-.example__numbers {
+.example__number-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 10px;
+
+  @media (min-width: @tablet-width) {
+    flex-shrink: 0;
+    width: 366px;
+    flex-grow: 1;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: auto;
+  }
+}
+
+.example__number-item {
+  width: calc(50% - 16px);
+  text-align: center;
+  border-radius: 3px;
+
+  @media (min-width: @tablet-width) {
+    width: calc(50% - 21px);
+  }
+}
+
+.example__number-value {
+  position: relative;
+  padding: 15px 10px;
   font-size: 24px;
   line-height: 24px;
-  color: #000000;
+  text-transform: uppercase;
+  color: #111111;
+  border: 1px solid #cdcdcd;
+  border-radius: 3px;
 
   @media (min-width: @tablet-width) {
+    padding-bottom: 19px;
     font-size: 30px;
-    line-height: 37px;
+    line-height: 36px;
   }
 }
 
-.example__numbers-wrapper {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-
-  @media (min-width: @desktop-width) {
-    margin: 0;
-    padding-top: 16px;
-    padding-bottom: 16px;
-  }
-}
-
-.example__numbers-row {
-  display: flex;
-  flex-direction: column;
-}
-
-.example__numbers-about {
-  font-family: "Arial", "Helvetica", sans-serif;
+.example__number-mark {
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
   font-size: 12px;
   line-height: 12px;
-  color: @text;
-  margin: 0;
+  background-color: @background;
+  transform: translateY(-8px);
 
   @media (min-width: @tablet-width) {
+    margin-left: 7px;
+    margin-right: 7px;
+    padding-left: 10px;
+    padding-right: 10px;
     font-size: 14px;
     line-height: 14px;
+    background-color: #ffffff;
+    transform: translateY(-9px);
+  }
+
+  @media (min-width: @desktop-width) {
+    background-color: @background;
   }
 }
 
-.example__subtitle {
-  font-size: 14px;
-  line-height: 20px;
+.example__costs {
   text-align: center;
-  text-transform: uppercase;
-  color: #000000;
 
   @media (min-width: @tablet-width) {
-    font-size: 20px;
+    flex-grow: 1;
+    width: 342px;
+    padding-top: 11px;
+    padding-left: 42px;
+    text-align: right;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: auto;
+    margin-top: 36px;
+    padding: 0;
+    text-align: inherit;
   }
 }
 
-.example__text,
-.example__numbers-wrapper {
+.example__costs-wrapper {
+  margin: 0;
+  font-size: 14px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: #111111;
+
+  @media (min-width: @tablet-width) {
+    margin-left: auto;
+    font-size: 20px;
+    line-height: 20px;
+  }
+
   @media (min-width: @desktop-width) {
-    background: @background;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.example__costs-text {
+  @media (min-width: @desktop-width) {
+    width: 200px;
+    padding-right: 20px;
+  }
+}
+
+.example__costs-price {
+  @media (min-width: @tablet-width) {
+    display: block;
+    margin-top: 10px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: calc(50% - 21px);
+    margin-top: 0;
+    text-align: center;
+  }
+}
+
+.example__toggle {
+  margin-left: -20px;
+  margin-right: -20px;
+
+  @media (min-width: @tablet-width) {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: auto;
+    margin-right: -40px;
   }
 }

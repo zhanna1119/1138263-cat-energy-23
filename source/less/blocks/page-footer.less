@@ -1,5 +1,6 @@
 .page-footer {
   background: @background;
+  padding-bottom: 32px;
 }
 
 .page-footer__wrapper {
@@ -27,6 +28,7 @@
 
 .page-footer__social-item {
   padding: 23px 16px;
+  align-self: center;
 }
 
 .page-footer__social-link {
@@ -42,15 +44,28 @@
 
   @media (min-width: @tablet-width) {
     border: none;
+    padding-bottom: 0;
+    align-self: center;
   }
 }
 
-.page-footer__copyright {
+.page-footer__copyright-link {
   font-family: "Arial", "Helvetica", sans-serif;
   font-size: 16px;
   line-height: 18px;
   color: @text;
   text-decoration: none;
-  text-align: center;
+  padding-top: 28px;
   display: block;
+  position: relative;
+}
+
+.page-footer__copyright-icon {
+  position: absolute;
+  top: 17px;
+  left: 250px;
+
+  @media (min-width: @tablet-width) {
+    left: 120px;
+  }
 }
