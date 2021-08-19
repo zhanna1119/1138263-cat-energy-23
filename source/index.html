@@ -11,22 +11,23 @@
 <body class="page__body">
 
   <header class="page-header">
+    <div class="page-header__container">
     <div class="page-header__wrapper">
-      <div class="page-header__wrapper-logo wrapper">
+      <div class="page-header__wrapper-logo">
         <a class="page-header__logo" href="#"><img src="img/logo-minimal.svg" width="191" height="37"
             alt="Логотип Cat Energy"></a>
-        <button class="page-header__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
       </div>
-      <nav class="main-nav wrapper">
+      <nav class="main-nav main-nav--closed">
+        <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
         <ul class="main-nav__list">
           <li class="main-nav__item main-nav__item--current">
             <a class="main-nav__link" href="#">Главная</a>
           </li>
           <li class="main-nav__item">
-            <a class="main-nav__link" href="catalog.html">Каталог продукции</a>
+            <a class="main-nav__link" href="./catalog.html">Каталог продукции</a>
           </li>
           <li class="main-nav__item">
-            <a class="main-nav__link" href="form.html">Подбор программы</a>
+            <a class="main-nav__link" href="./form.html">Подбор программы</a>
           </li>
         </ul>
       </nav>
@@ -34,14 +35,13 @@
     <div class="intro">
       <div class="intro__wrapper">
         <div class="intro__wrapper-content">
-          <div class="wrapper">
             <h1 class="intro__title">Функциональное<br> питание для котов</h1>
             <p class="intro__text">Занялся собой? Займись котом!</p>
-          </div>
         </div>
-        <div class="intro__content  wrapper"></div>
+        <div class="intro__content wrapper"></div>
       </div>
       <a class="intro__link" href="form.html">Подобрать программу</a>
+    </div>
     </div>
   </header>
 
@@ -49,78 +49,89 @@
     <section class="promo">
       <div class="promo__wrapper">
         <div class="promo__card">
+          <div class="promo__card-content">
           <h3 class="promo__title promo__title--slim">Похудение</h3>
           <p class="promo__text">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на
             диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
-          <a class="promo__button" href="catalog.html">Каталог Slim</a>
+          <a class="promo__button" href="catalog.html">Каталог Slim</a></div>
+          <div class="promo__card-back promo__card-back--slim"></div>
         </div>
         <div class="promo__card">
+          <div class="promo__card-content">
           <h3 class="promo__title promo__title--pro">Набор массы</h3>
           <p class="promo__text">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет
             вашему коту нарастить необходимые мышцы!</p>
-          <a class="promo__button" href="catalog.html">Каталог Pro</a>
+          <a class="promo__button" href="catalog.html">Каталог Pro</a></div>
+          <div class="promo__card-back promo__card-back--pro"></div>
         </div>
       </div>
     </section>
     <section class="about">
       <div class="wrapper">
         <h2 class="about__title">Как это работает</h2>
-        <ul class="about__list">
-          <li class="about__item about__item--natural">Функциональное питание содержит только полезные питательные
-            вещества.</li>
-          <li class="about__item about__item--water">Выпускается в виде порошка, который нужно лишь залить кипятком и
-            готово.</li>
-          <li class="about__item about__item--device">Замените один-два приема обычной еды на наше функциональное
-            питание.</li>
-          <li class="about__item about__item--time">Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!
-          </li>
-        </ul>
+        <ol class="about__list">
+          <li class="about__item about__item--natural"><p class="about__item-text">Функциональное питание содержит только полезные питательные
+            вещества.</p></li>
+          <li class="about__item about__item--water"><p class="about__item-text">Выпускается в виде порошка, который нужно лишь залить кипятком и
+            готово.</p></li>
+          <li class="about__item about__item--device"><p class="about__item-text">Замените один-два приема обычной еды на наше функциональное
+            питание.</p></li>
+          <li class="about__item about__item--time"><p class="about__item-text">Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!
+          </p></li>
+        </ol>
       </div>
     </section>
     <section class="example">
-      <div class="example__content wrapper">
-        <div class="example__column">
-          <div class="example__wrapper">
+      <div class="example__container wrapper">
+        <div class="example__layout">
+          <div class="example__title-block">
             <h2 class="example__title">Живой пример</h2>
-            <p class="example__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy
-              Slim.
-              Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16
-              часов в день.</p>
-            <dl class="example__numbers-wrapper">
-              <div class="example__numbers-row">
-                <dt class="example__numbers">5 кг</dt>
-                <dd class="example__numbers-about">снижение веса</dd>
+          </div>
+          <div class="example__info-block">
+            <p class="example__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
+            <div class="example__number">
+              <div class="example__number-list">
+              <div class="example__number-item">
+                <div class="example__number-value">5 кг</div>
+                <div class="example__number-mark">снижение веса</div>
               </div>
-              <div class="example__numbers-row">
-                <dt class="example__numbers">60 дней</dt>
-                <dd class="example__numbers-about">затрачено времени</dd>
+              <div class="example__number-item">
+                <div class="example__number-value">60 дней</div>
+                <div class="example__number-mark">затрачено времени</div>
               </div>
-            </dl>
-            <div class="example__numbers-row">
-              <p class="example__subtitle">Затраты на питание: 15 000 руб.</p>
+              </div>
+              <div class="example__costs">
+                <p class="example__costs-wrapper">
+                  <span class="example__costs-text">Затраты на питание:</span>
+                  <span class="example__costs-price">15000 руб.</span>
+                </p>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="example__column">
-          <div class="slider">
-            <div class="example__img">
-              <img src="img/cat-example-before.jpg" width="280" height="232" alt="Фото кота до приема Cat Energy">
-              <img class="visually-hidden" src="img/cat-example-after.jpg" width="251" height="240"
-                alt="Фото кота после приема Кет Энерджи">
-            </div>
-            <div class="slider__scale">
-              <div class="slider__bar"></div>
-              <div class="slider__toggle-wrapper">
-                <div class="slider__toggle slider__toggle--before">было</div>
-                <div class="slider__toggle slider__toggle--after">стало</div>
+          <div class="example__toggle toggle">
+            <input class="toggle__input toggle__input--before" type="radio" id="example-input-before" name="example-input">
+            <input class="toggle__input toggle__input--after" type="radio" id="example-input-after" name="example-input">
+            <div class="toggle__list">
+              <div class="toggle__item toggle__item--before">
+                <img src="img/example-before-min.png" width="311" height="232" alt="Пример кота до приема Cat Energy">
               </div>
+              <div class="toggle__item toggle__item--after">
+                <img src="img/example-after-min.png" width="311" height="232" alt="Пример кота после приема Cat Energy">
+              </div>
+            </div>
+            <div class="toggle__control">
+              <label class="toggle__label toggle__label--before" for="example-input-before">Было</label>
+              <div class="toggle__range">
+                <div class="toggle__scale"></div>
+                <button class="toggle__button" type="button">До/после</button>
+              </div>
+              <label class="toggle__label toggle__label--after" for="example-input-after">Стало</label>
             </div>
           </div>
         </div>
       </div>
     </section>
     <section class="location location__index">
-      <div class="wrapper">
         <div class="location__wrapper">
           <h3 class="location__title">Приглашаем к сотрудничеству дилеров!</h3>
           <p class="location__text">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
@@ -134,7 +145,6 @@
               Яндекс.Карты</a><iframe class="location__map-iframe" src="https://yandex.ru/map-widget/v1/-/CCUURMQl~D"
               allowfullscreen="true" style="position: relative;"></iframe></div>
         </div>
-      </div>
     </section>
   </main>
 
@@ -157,12 +167,11 @@
                 src="img/icon_facebook.svg" width="22" height="22" alt="Иконка Фейсбук"></a>
           </li>
         </ul>
-        <a class="page-footer__copyright" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy <img
-            src="img/htmlacademy.svg" width="34" height="34" alt="логотип HTML Academy"></a>
+        <a class="page-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy<img class="page-footer__copyright-icon" src="img/htmlacademy.svg" width="34" height="34" alt="логотип HTML Academy"></a>
       </div>
     </div>
   </footer>
-
+  <script src="js/script.js"></script>
 </body>
 
 </html>
