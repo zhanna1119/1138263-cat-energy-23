@@ -1,10 +1,17 @@
+.catalog {
+  @media (min-width: @desktop-width) {
+    width: 100%;
+    min-width: 1220px;
+    margin: 0 auto;
+  }
+}
+
 .catalog__title {
   font-size: 36px;
   font-weight: 400;
   line-height: 36px;
   color: #000000;
   margin-top: 27px;
-  margin-bottom: 49px;
 
   @media (min-width: @tablet-width) {
     font-size: 60px;
@@ -19,29 +26,62 @@
 .catalog__list {
   list-style: none;
   padding: 0;
-  margin: 0;
+  margin: 0 auto;
 
   @media (min-width: @tablet-width) {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 324px 324px;
+    grid-column-gap: 60px;
+    padding: 0 30px;
+    margin: 0 auto;
+    min-width: 280px;
+    max-width: 1220px;
+    box-sizing: border-box;
   }
 
   @media (min-width: @desktop-width) {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
+    width: 100%;
   }
 }
 
 .catalog__card-title {
   font-size: 16px;
   line-height: 20px;
+  font-weight: 400;
   text-transform: uppercase;
   color: @title-catalog-card;
+  width: 76px;
+  text-align: left;
+  padding-bottom: 18px;
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 24px;
+    width: 150px;
+    text-align: center;
+    margin: 0 auto;
+  }
+}
+
+.catalog__card-title-other {
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: @title-catalog-card;
+  text-align: center;
+  padding-bottom: 18px;
+  padding-top: 78px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 24px;
+    width: 134px;
+    text-align: center;
+    margin: 0 auto;
+    padding-top: 182px;
   }
 }
 
@@ -56,51 +96,109 @@
   }
 }
 
+.catalog__card-text-other {
+  text-align: center;
+
+  @media (min-width: @tablet-width) {
+    margin: 0 auto;
+    padding-bottom: 30px;
+    width: 167px;
+  }
+}
+
+.catalog__card-row {
+  display: flex;
+  justify-content: space-between;
+  width: 142px;
+
+  @media (min-width: @tablet-width) {
+    border-bottom: 1px solid @line-catalog;
+    width: 250px;
+    padding-top: 7px;
+    padding-bottom: 9px;
+  }
+}
+
 .catalog__button,
 .catalog__button-more {
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
-  padding: 10px 109px;
   border: none;
 }
 
 .catalog__button {
   background: @primary;
   color: #ffffff;
+  padding: 10px 109px;
+
+  @media (min-width: @tablet-width) {
+    padding: 10px 93px;
+  }
 }
 
 .catalog__button-more {
   background: @background;
   color: @text;
+  padding: 10px 94px;
+
+  @media (min-width: @tablet-width) {
+    padding: 10px 78px;
+  }
+}
+
+.catalog__item-wrapper {
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding: 0 20px;
+  width: 100%;
+  min-width: 280px;
 }
 
 .catalog__content {
-  display: grid;
-  grid-template-columns: min-content max-content 1fr;
+  display: flex;
+  justify-content: space-around;
+  padding: 25px 0;
 
   @media (min-width: @tablet-width) {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     justify-content: space-between;
+    align-items: center;
   }
 }
 
+.catalog__card {
+  width: 50%;
+}
+
 .catalog__img {
-  width: 75px;
+  margin: auto;
 
   @media (min-width: @tablet-width) {
     margin: 0 auto;
   }
 }
 
-.catalog__item {
-  padding-top: 25px;
+.catalog__item-border {
+  border-top: 1px solid @line-catalog;
 
   @media (min-width: @tablet-width) {
-    padding: 37px;
+    border-top: none;
+  }
+}
+
+.catalog__item {
+  padding-top: 25px;
+  padding-bottom: 25px;
+  border-bottom: 1px solid @line-catalog;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 25px;
+    padding: 17px;
     background: linear-gradient(to top, @background-dark 70%, #ffffff 30%);
+    border-bottom: none;
   }
 
   @media (min-width: @desktop-width) {
@@ -110,8 +208,42 @@
 }
 
 .catalog__item-other {
+  position: relative;
+
+  ::before {
+    content: "";
+    height: 2px;
+    width: 30px;
+    background-color: #d3d3d3;
+    position: absolute;
+    top: 90px;
+    left: 150px;
+
+    @media (min-width: @tablet-width) {
+      width: 60px;
+      left: 136px;
+    }
+  }
+
+  ::after {
+    content: "";
+    height: 30px;
+    width: 2px;
+    background-color: #d3d3d3;
+    position: absolute;
+    top: 76px;
+    left: 165px;
+
+    @media (min-width: @tablet-width) {
+      height: 60px;
+      top: 60px;
+    }
+  }
+
   @media (min-width: @tablet-width) {
-    padding: 10px;
+    width: 324px;
+    height: 429px;
+    box-sizing: border-box;
     background: #ffffff;
     border: 1px solid @background;
   }
