@@ -21,13 +21,13 @@
         <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
         <ul class="main-nav__list">
           <li class="main-nav__item main-nav__item--current">
-            <a class="main-nav__link" href="#">Главная</a>
+            <a class="main-nav__link main-nav__link-index" href="#">Главная</a>
           </li>
           <li class="main-nav__item">
-            <a class="main-nav__link" href="./catalog.html">Каталог продукции</a>
+            <a class="main-nav__link main-nav__link-index" href="./catalog.html">Каталог продукции</a>
           </li>
           <li class="main-nav__item">
-            <a class="main-nav__link" href="./form.html">Подбор программы</a>
+            <a class="main-nav__link main-nav__link-index" href="./form.html">Подбор программы</a>
           </li>
         </ul>
       </nav>
@@ -47,7 +47,7 @@
 
   <main class="page-main">
     <section class="promo">
-      <div class="promo__wrapper">
+      <div class="promo__wrapper wrapper">
         <div class="promo__card">
           <div class="promo__card-content">
           <h3 class="promo__title promo__title--slim">Похудение</h3>
@@ -82,8 +82,8 @@
       </div>
     </section>
     <section class="example">
-      <div class="example__container wrapper">
-        <div class="example__layout">
+      <div class="example__container">
+        <div class="example__content-block">
           <div class="example__title-block">
             <h2 class="example__title">Живой пример</h2>
           </div>
@@ -108,15 +108,17 @@
               </div>
             </div>
           </div>
+          </div>
+          <div class="example__img-block">
           <div class="example__toggle toggle">
             <input class="toggle__input toggle__input--before" type="radio" id="example-input-before" name="example-input">
             <input class="toggle__input toggle__input--after" type="radio" id="example-input-after" name="example-input">
             <div class="toggle__list">
               <div class="toggle__item toggle__item--before">
-                <img src="img/example-before-min.png" width="311" height="232" alt="Пример кота до приема Cat Energy">
+                <img class="toggle__img" src="img/example-before-min.png" width="311" height="232" alt="Пример кота до приема Cat Energy">
               </div>
               <div class="toggle__item toggle__item--after">
-                <img src="img/example-after-min.png" width="311" height="232" alt="Пример кота после приема Cat Energy">
+                <img class="toggle__img" src="img/example-after-min.png" width="311" height="232" alt="Пример кота после приема Cat Energy">
               </div>
             </div>
             <div class="toggle__control">
