@@ -4,6 +4,7 @@
 <head class="page">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="./favicon.ico/favicon-32x32.png">
   <title>HTML Academy: Кэт энерджи</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -115,10 +116,19 @@
             <input class="toggle__input toggle__input--after" type="radio" id="example-input-after" name="example-input">
             <div class="toggle__list">
               <div class="toggle__item toggle__item--before">
-                <img class="toggle__img" src="img/example-before-min.png" width="311" height="232" alt="Пример кота до приема Cat Energy">
+                <picture>
+                  <source media="(min-width: 1440px)" srcset="img/example-before-max.png 1x, img/example-before-max@2x.png 2x">
+                  <source media="(min-width: 768px)" srcset="img/example-before-mid.png 1x, img/example-before-mid@2x.png 2x">
+                  <img class="toggle__img toggle__img--before" src="img/example-before-min.png" srcset="img/example-before-min@2x.png 2x" alt="Пример кота до приема Cat Energy">
+                </picture>
               </div>
               <div class="toggle__item toggle__item--after">
-                <img class="toggle__img" src="img/example-after-min.png" width="311" height="232" alt="Пример кота после приема Cat Energy">
+                <picture>
+                  <source media="(min-width: 1440px)" srcset="img/example-after-max.png 1x, img/example-after-max@2x.png 2x">
+                  <source media="(min-width: 768px)" srcset="img/example-after-mid.png 1x, img/example-after-mid@2x.png 2x">
+                  <img class="toggle__img toggle__img--after" src="img/example-after-min.png" srcset="img/example-after-min@2x.png 2x"
+                    alt="Пример кота после приема Cat Energy">
+                </picture>
               </div>
             </div>
             <div class="toggle__control">
