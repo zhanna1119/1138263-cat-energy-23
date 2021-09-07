@@ -1,9 +1,9 @@
 .toggle {
   position: relative;
-  padding-bottom: 36px;
+  padding-bottom: 34px;
 
   @media (min-width: @tablet-width) {
-    padding-bottom: 66px;
+    padding-bottom: 17px;
     width: 690px;
   }
 
@@ -33,7 +33,7 @@
   @media (min-width: @tablet-width) {
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 14px;
+    margin-bottom: 18px;
   }
 
   @media (min-width: @desktop-width) {
@@ -56,12 +56,13 @@
     bottom: 0;
     z-index: 2;
     overflow: hidden;
-    transition: all 0.3s ease;
-    width: 260px;
+    width: 345px;
+    height: 621px;
   }
 
   @media (min-width: @desktop-width) {
-    left: 56px;
+    left: 19px;
+    top: -43px;
     width: 405px;
     height: 536px;
   }
@@ -72,12 +73,14 @@
 
   @media (min-width: @tablet-width) {
     display: block;
-    left: 260px;
-    width: 260px;
+    left: 344px;
+    width: 367px;
+    height: 619px;
   }
 
   @media (min-width: @desktop-width) {
-    left: 420px;
+    top: -41px;
+    left: 384px;
     width: 325px;
     height: 654px;
   }
@@ -120,6 +123,17 @@
   flex-direction: row;
   justify-content: center;
   z-index: 3;
+
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    top: 552px;
+    left: 58px;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: 510px;
+    left: 79px;
+  }
 }
 
 .toggle__label {

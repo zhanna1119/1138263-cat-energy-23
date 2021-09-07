@@ -14,7 +14,7 @@
 
   @media (min-width: @desktop-width) {
     margin: 0 auto;
-    padding: 0 30px;
+    padding-left: 80px;
     box-sizing: border-box;
     width: 100%;
     max-width: 1220px;
@@ -24,15 +24,20 @@
 .intro__wrapper {
   position: relative;
 
+  @media (min-width: @tablet-width) {
+    margin-bottom: 20px;
+  }
+
   @media (min-width: @desktop-width) {
     display: flex;
     position: relative;
+    padding-bottom: 64px;
   }
 }
 
 .intro__wrapper-content {
   background-color: @primary;
-  padding: 27px 0 165px 0;
+  padding: 28px 0 165px 0;
   background-image: url("../img/intro-background-min.jpg");
   background-size: 100%;
   background-repeat: no-repeat;
@@ -44,13 +49,13 @@
   }
 
   @media (min-width: @tablet-width) {
-    padding: 0 90px;
+    padding: 0 87px;
     background-image: none;
     background-color: #ffffff;
   }
 
   @media (min-width: @desktop-width) {
-    padding-top: 100px;
+    padding-top: 161px;
     padding-left: 0;
     padding-right: 0;
   }
@@ -63,7 +68,7 @@
   width: 280px;
   height: 272px;
   position: absolute;
-  top: 160px;
+  top: 166px;
   left: 20px;
 
   @media (min-resolution: 2dppx) {
@@ -76,7 +81,8 @@
     width: 709px;
     height: 609px;
     position: relative;
-    top: 0;
+    top: 20px;
+    left: 0;
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/intro-cat-energy-mid@2x.jpg");
@@ -86,7 +92,8 @@
 
   @media (min-width: @desktop-width) {
     background-image: url("../img/intro-cat-energy-max.png");
-    top: 75px;
+    top: 86px;
+    left: -133px;
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/intro-cat-energy-max@2x.png");
@@ -97,7 +104,8 @@
 
 .intro__title {
   margin: 0;
-  padding-bottom: 27px;
+  padding-bottom: 23px;
+  font-weight: 400;
   font-size: 36px;
   line-height: 36px;
 
@@ -109,6 +117,7 @@
     text-align: left;
     padding-left: 0;
     margin-top: 62px;
+    padding-bottom: 42px;
   }
 
   @media (min-width: @desktop-width) {
@@ -136,9 +145,9 @@
   text-decoration: none;
   text-align: center;
   background: @primary;
-  padding: 10px 22px;
+  padding: 10px 22px 15px 22px;
   margin: 20px;
-  margin-top: 120px;
+  margin-top: 140px;
 
   &:hover {
     background-color: @primary-hover;
@@ -151,18 +160,19 @@
 
   @media (min-width: @tablet-width) {
     margin: 30px;
-    padding: 14px 26px;
+    padding: 17px 26px;
     margin-left: 90px;
     text-align: left;
     width: max-content;
     z-index: 2;
     position: absolute;
-    top: 350px;
+    top: 340px;
   }
 
   @media (min-width: @desktop-width) {
     top: 390px;
     margin-left: 0;
+    margin-top: 65px;
   }
 }
 
