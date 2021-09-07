@@ -25,7 +25,7 @@
 .page-header__container {
   @media (min-width: @desktop-width) {
     margin: 0 auto;
-    padding: 0 30px;
+    padding: 0;
     box-sizing: border-box;
     width: 100%;
     max-width: 1220px;
@@ -42,7 +42,7 @@
     justify-content: space-between;
     position: absolute;
     margin: 0 auto;
-    padding: 0 30px;
+    padding: 0;
     box-sizing: border-box;
     width: 100%;
     max-width: 1220px;
@@ -50,14 +50,32 @@
 }
 
 .page-header__wrapper-logo {
-  padding: 17px 20px;
+  padding: 10px 20px 14px 20px;
   border-bottom: 1px solid @line-index;
 
   @media (min-width: @tablet-width) {
     border-bottom: none;
+    padding: 24px 0 0 0;
   }
 
   @media (min-width: @desktop-width) {
     z-index: 2;
+    padding-top: 52px;
+  }
+}
+
+.page-header__wrapper-logo--catalog {
+  @media (min-width: @desktop-width) {
+    padding-top: 54px;
+  }
+}
+
+.page-header__logo img {
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
   }
 }

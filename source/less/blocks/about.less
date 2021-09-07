@@ -6,6 +6,7 @@
 
   @media (min-width: @desktop-width) {
     border-bottom: none;
+    margin-top: 42px;
   }
 }
 
@@ -14,7 +15,7 @@
   line-height: 40px;
   font-weight: 400;
   color: #000000;
-  margin: 27px 0 38px 0;
+  margin: 27px 0 40px 0;
 
   @media (min-width: @tablet-width) {
     font-size: 60px;
@@ -26,41 +27,44 @@
 .about__list {
   list-style: none;
   padding: 0;
-  margin: 0 0 22px 0;
-  padding-left: 100px;
+  margin: 0;
+  padding-left: 79px;
+  margin-bottom: 24px;
   counter-reset: item_number;
 
   @media (min-width: @tablet-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    grid-column-gap: 58px;
     padding-left: 0;
     margin-top: 50px;
+    margin-bottom: 0;
   }
 
   @media (min-width: @desktop-width) {
     grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-column-gap: 80px;
   }
 }
 
 .about__item {
-  padding-bottom: 20px;
+  padding-bottom: 25px;
   position: relative;
 
   @media (min-width: @tablet-width) {
     width: calc(50% - 30px);
-    min-height: 265px;
-    margin-left: 50px;
-    padding-top: 30px;
+    min-height: 214px;
+    padding-top: 78px;
 
     ::after {
       content: counter(item_number);
       counter-increment: item_number;
       position: absolute;
-      top: 0;
-      left: 76px;
-      min-width: 136px;
-      font-size: 281px;
-      line-height: 235px;
+      top: 9px;
+      left: 88px;
+      min-width: 112px;
+      font-size: 280px;
+      line-height: 280px;
       color: @background;
       z-index: -1;
       text-align: right;
@@ -80,7 +84,7 @@
     font-size: 16px;
     line-height: 24px;
     width: 245px;
-    margin-top: 50px;
+    margin-top: 57px;
   }
 }
 
@@ -90,17 +94,19 @@
     width: 60px;
     height: 60px;
     position: absolute;
-    top: 0;
-    left: -100px;
+    top: -3;
+    left: -80px;
 
     @media (min-width: @tablet-width) {
-      content: url("../img/icon-food.svg");
+      content: "";
+      background-image: url("../img/icon-food.svg");
+      background-size: 80px 80px;
       width: 80px;
       height: 80px;
       margin-top: 2px;
       margin-right: 0;
       margin-bottom: 32px;
-      top: 0;
+      top: 21px;
       left: 0;
     }
   }
@@ -112,19 +118,21 @@
     width: 60px;
     height: 60px;
     position: absolute;
-    top: 0;
-    left: -100px;
+    top: -3;
+    left: -80px;
   }
 
   @media (min-width: @tablet-width) {
     &::before {
-      content: url("../img/icon-water.svg");
+      content: "";
+      background-image: url("../img/icon-water.svg");
+      background-size: 80px 80px;
       width: 80px;
       height: 80px;
       margin-top: 2px;
       margin-right: 0;
       margin-bottom: 32px;
-      top: 0;
+      top: 21px;
       left: 0;
     }
   }
@@ -136,19 +144,21 @@
     width: 60px;
     height: 60px;
     position: absolute;
-    top: 0;
-    left: -100px;
+    top: -3;
+    left: -80px;
   }
 
   @media (min-width: @tablet-width) {
     &::before {
-      content: url("../img/icon-device.svg");
+      content: "";
+      background-image: url("../img/icon-device.svg");
+      background-size: 80px 80px;
       width: 80px;
       height: 80px;
       margin-top: 2px;
       margin-right: 0;
       margin-bottom: 32px;
-      top: 0;
+      top: 21px;
       left: 0;
     }
   }
@@ -160,19 +170,21 @@
     width: 60px;
     height: 60px;
     position: absolute;
-    top: 0;
-    left: -100px;
+    top: -3;
+    left: -80px;
   }
 
   @media (min-width: @tablet-width) {
     &::before {
-      content: url("../img/icon-time.svg");
+      content: "";
+      background-image: url("../img/icon-time.svg");
+      background-size: 80px 80px;
       width: 80px;
       height: 80px;
       margin-top: 2px;
       margin-right: 0;
       margin-bottom: 32px;
-      top: 0;
+      top: 21px;
       left: 0;
     }
   }

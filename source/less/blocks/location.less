@@ -16,7 +16,7 @@
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
-    line-height: 21px;
+    line-height: 26px;
     padding-right: 148px;
   }
 
@@ -31,15 +31,32 @@
   line-height: 20px;
   color: @text;
   margin: 0;
+  margin-left: 25px;
 
   @media (min-width: @tablet-width) {
     font-size: 16px;
     line-height: 20px;
-    padding-left: 147px;
+    padding-left: 106px;
+    margin-left: 0;
+    text-align: right;
   }
 
   @media (min-width: @desktop-width) {
-    padding-left: 40px;
+    padding-left: 0;
+    padding-right: 16px;
+    text-align: left;
+    margin-left: 0;
+  }
+}
+
+.location__text-city {
+  @media (min-width: @tablet-width) {
+    display: block;
+    padding-top: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 0;
   }
 }
 
@@ -48,14 +65,14 @@
 }
 
 .location__wrapper {
+  box-sizing: border-box;
   margin: 0 auto;
-  padding: 40px 20px 26px 20px;
+  padding: 28px 20px 26px 20px;
   display: flex;
   justify-content: space-between;
 
   @media (min-width: @tablet-width) {
-    padding: 50px 71px;
-    justify-content: space-around;
+    padding: 63px 71px;
   }
 
   @media (min-width: @desktop-width) {
@@ -64,12 +81,23 @@
     background: #ffffff;
     top: 95px;
     width: 570px;
-    padding: 66px 70px;
+    padding: 63px 76px;
+    margin-left: 110px;
+  }
+}
+
+.location__wrapper--catalog {
+  @media (max-width: @mobile-width-only) {
+    padding-top: 13px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 75px;
   }
 }
 
 .location__map-iframe {
   width: 100%;
-  height: 362px;
+  height: 396px;
   border: none;
 }

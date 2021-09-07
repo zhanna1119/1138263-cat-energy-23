@@ -3,18 +3,21 @@
   line-height: 36px;
   color: #000000;
   font-weight: 400;
-  margin-top: 27px;
+  margin-top: 29px;
   margin-bottom: 37px;
 
   @media (min-width: @tablet-width) {
     font-size: 60px;
     line-height: 60px;
     padding-left: 40px;
+    margin-top: 64px;
+    margin-bottom: 54px;
   }
 
   @media (min-width: @desktop-width) {
-    margin-top: 72px;
     margin-bottom: 56px;
+    margin-top: 187px;
+    padding-left: 0;
   }
 }
 
@@ -28,10 +31,12 @@
     font-size: 20px;
     line-height: 30px;
     padding-left: 40px;
+    margin-bottom: 56px;
   }
 
   @media (min-width: @desktop-width) {
     margin-bottom: 54px;
+    padding-left: 0;
   }
 }
 
@@ -41,25 +46,69 @@
   padding-right: 20px;
   font-size: 24px;
   line-height: 26px;
-  margin-bottom: 23px;
-  padding-top: 23px;
+  margin-bottom: 40px;
+  padding-top: 26px;
   color: #000000;
   background-color: #ffffff;
+
 
   @media (min-width: @tablet-width) {
     font-size: 36px;
     line-height: 36px;
     margin-left: 40px;
   }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 110px;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
 }
 
 .form__subtitle-contacts {
   width: 200px;
   padding-right: 0;
+  margin-bottom: 35px;
+  padding-top: 23px;
 
   @media (min-width: @tablet-width) {
     width: max-content;
-    padding-right: 20px;
+    margin-left: 30px;
+    margin-right: 65px;
+    padding-right: 42px;
+    padding-left: 39px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 71px;
+  }
+}
+
+.form__subtitle-comment {
+  @media (min-width: @tablet-width) {
+    padding-top: 24px;
+    padding-right: 40px;
+    padding-left: 29px;
+    margin-bottom: 62px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 80px;
+  }
+}
+
+.form__subtitle-other {
+  padding-top: 22px;
+  margin-bottom: 27px;
+
+  @media (min-width: @tablet-width) {
+    padding-right: 42px;
+    padding-left: 38px;
+    margin-left: 32px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 72px;
   }
 }
 
@@ -69,7 +118,7 @@
   text-transform: uppercase;
   color: #ffffff;
   background: @primary;
-  padding: 7px 44px;
+  padding: 10px 44px;
   border: none;
   width: 100%;
   cursor: pointer;
@@ -99,13 +148,19 @@
   line-height: 16px;
   color: #000000;
   text-align: center;
+  margin-top: 23px;
+  margin-bottom: 31px;
 
   @media (min-width: @tablet-width) {
     font-size: 16px;
+    margin-right: 34px;
+    margin-top: 21px;
   }
 
   @media (min-width: @desktop-width) {
     padding-left: 80px;
+    margin-top: 20px;
+    margin-bottom: 20px;
   }
 }
 
@@ -114,13 +169,17 @@
     padding-left: 40px;
     padding-right: 37px;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: max-content 1fr;
     margin-bottom: 72px;
   }
 
   @media (min-width: @desktop-width) {
     display: flex;
     justify-content: flex-start;
+    padding-left: 0;
+    padding-right: 0;
+    margin-top: 12px;
+    margin-bottom: 81px;
   }
 }
 
@@ -128,5 +187,7 @@
   @media (min-width: @desktop-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    grid-column-gap: 78px;
+    margin-bottom: 10px;
   }
 }

@@ -5,13 +5,16 @@
   color: @text;
   box-sizing: border-box;
   height: 45px;
-  padding: 13px 15px 12px;
+  padding: 10px 13px 10px;
   width: 100%;
   text-transform: uppercase;
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 30px;
+    padding-left: 18px;
+    padding-top: 13px;
+    padding-bottom: 11px;
   }
 }
 
@@ -28,7 +31,7 @@
 }
 
 .input-radio:checked ~ .label-radio::before {
-  background: radial-gradient(circle closest-side, @primary 5px, #ffffff 6px);
+  background: radial-gradient(circle closest-side, @primary 10px, #ffffff 6px);
 }
 
 .input-radio:disabled {
@@ -46,12 +49,12 @@
   position: absolute;
   top: 16px;
   right: 14px;
-}
 
-.input-textarea {
-  @media (min-width: @tablet-width) {
-    margin-top: 90px;
-    margin-bottom: 90px;
-    box-sizing: content-box;
+  &:focus {
+    fill: @primary;
+  }
+
+  &:invalid {
+    fill: @error;
   }
 }
