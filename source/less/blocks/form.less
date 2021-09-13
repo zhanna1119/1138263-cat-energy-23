@@ -1,3 +1,11 @@
+.form__fieldset-container {
+  @media (min-width: @desktop-width) {
+    margin: 0 auto;
+    max-width: 1220px;
+    padding: 0 30px;
+  }
+}
+
 .form__title {
   font-size: 36px;
   line-height: 36px;
@@ -41,9 +49,11 @@
 }
 
 .form__subtitle {
+  display: block;
   box-sizing: content-box;
   padding-left: 20px;
   padding-right: 20px;
+  font-weight: 400;
   font-size: 24px;
   line-height: 26px;
   margin-bottom: 40px;
@@ -85,6 +95,8 @@
 }
 
 .form__subtitle-comment {
+  width: max-content;
+
   @media (min-width: @tablet-width) {
     padding-top: 24px;
     padding-right: 40px;
@@ -98,6 +110,7 @@
 }
 
 .form__subtitle-other {
+  width: max-content;
   padding-top: 22px;
   margin-bottom: 27px;
 

@@ -17,8 +17,8 @@
         <div class="page-header__wrapper-logo">
           <a class="page-header__logo" href="./index.html">
             <picture>
-              <source media="(min-width: 1440px)" srcset="img/logo-desktop.svg" width="202" height="59">
-              <source media="(min-width: 768px)" srcset="img/logo-tablet.svg" width="174" height="51">
+              <source media="(min-width: 1440px)" srcset="img/logo-desktop.svg">
+              <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
               <img src="img/logo-minimal.svg" width="191" height="37" alt="Логотип Cat Energy">
             </picture>
           </a>
@@ -38,6 +38,7 @@
           </ul>
         </nav>
       </div>
+      </div>
   </header>
   <main>
     <form class="form" action="https://echo.htmlacademy.ru" method="POST">
@@ -45,7 +46,7 @@
         <h1 class="form__title">Подбор программы</h1>
         <p class="form__text">Заполните анкету, и мы подберем<br> программу питания для вашего кота</p>
       </div>
-      <div class="fieldset__container">
+      <div class="form__fieldset-container">
         <div class="form__column-wrapper">
           <fieldset class="fieldset">
             <div class="fieldset__wrapper fieldset__wrapper-info">
@@ -85,7 +86,7 @@
       </div>
       <fieldset class="fieldset">
         <div class="fieldset__container-line">
-          <legend class="form__subtitle form__subtitle-contacts">Контактные данные (владельца кота)</legend>
+          <h2 class="form__subtitle form__subtitle-contacts">Контактные данные (владельца кота)</h2>
         </div>
         <div class="fieldset__wrapper fieldset__wrapper-contacts">
           <div class="fieldset__contacts-wrapper">
@@ -113,7 +114,7 @@
       </fieldset>
       <fieldset class="fieldset">
         <div class="fieldset__container-line">
-          <legend class="form__subtitle form__subtitle-comment">Комментарий</legend>
+          <h2 class="form__subtitle form__subtitle-comment">Комментарий</h2>
         </div>
         <div class="fieldset__wrapper fieldset__wrapper-textarea">
           <textarea class="input-textarea" id="comment" name="comment">Расскажите обо всех повадках кота</textarea>
@@ -121,7 +122,7 @@
       </fieldset>
       <fieldset class="fieldset">
         <div class="fieldset__container-line">
-          <legend class="form__subtitle form__subtitle-other">Дополнительно</legend>
+          <h2 class="form__subtitle form__subtitle-other">Дополнительно</h2>
         </div>
         <div class="fieldset__wrapper fieldset__wrapper-other">
           <div class="fieldset__other">
@@ -184,19 +185,19 @@
         <ul class="page-footer__social-list">
           <li class="page-footer__social-item">
             <a class="page-footer__social-link" href="#" aria-label="Cat Energy во Вконтакте"><svg
-                class="page-footer__social-link--vkontakte" width="23" height="16">
+                class="page-footer__social-link-vkontakte" width="23" height="16">
                 <use xlink:href="../img/sprite.svg#icon-vkontakte"></use>
               </svg></a>
           </li>
           <li class="page-footer__social-item">
             <a class="page-footer__social-link" href="#" aria-label="Cat Energy в Инстаграме"><svg
-                class="page-footer__social-link--instagram" width="16" height="16">
+                class="page-footer__social-link-instagram" width="16" height="16">
                 <use xlink:href="../img/sprite.svg#icon-instagram"></use>
               </svg></a>
           </li>
           <li class="page-footer__social-item">
             <a class="page-footer__social-link" href="#" aria-label="Cat Energy в Фейсбуке"><svg
-                class="page-footer__social-link--facebook" width="22" height="22">
+                class="page-footer__social-link-facebook" width="22" height="22">
                 <use xlink:href="../img/sprite.svg#icon-facebook"></use>
               </svg></a>
           </li>
