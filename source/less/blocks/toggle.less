@@ -148,6 +148,14 @@
     font-size: 20px;
     padding: 7px 0 6px;
     border-bottom: 1px dotted rgba(0, 0, 0, 0.23);
+
+    &:hover {
+      border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+    }
+
+    &:active {
+      border-bottom: none;
+    }
   }
 }
 
@@ -202,10 +210,19 @@
     left: 50%;
     margin-top: -16px;
     margin-left: -17px;
-    background-color: #ffffff;
-    border: 1px solid #cdcdcd;
     border-radius: 50%;
-    box-shadow: 0 2px 5px 0 rgb(0 0 0 / 15%);
+    background: radial-gradient(circle closest-side, @primary 5px, #ffffff 6px);
+    border: 1px solid @line-catalog;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.16);
     cursor: pointer;
+
+    &:hover {
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.19);
+    }
+
+    &:active {
+      border: 1px solid @primary;
+      box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+    }
   }
 }
