@@ -26,6 +26,8 @@
 
   @media (min-width: @desktop-width) {
     padding: 0;
+    display: flex;
+    justify-content: space-between;
   }
 }
 
@@ -174,6 +176,7 @@
   background-image: url("../img/product-other-min.jpg");
   background-size: 280px 290px;
   background-repeat: no-repeat;
+  background-position: center;
 
   @media (min-resolution: 2dppx) {
     background-image: url("../img/product-other-min@2x.jpg");
@@ -187,13 +190,13 @@
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/product-other-mid@2x.jpg");
-      background-size: cover;
+      background-size: 100%;
     }
   }
 
   ::before {
     content: "";
-    background-image: url("../img/icon_gift.svg");
+    background-image: url("../img/icon-gift.svg");
     width: 78px;
     height: 80px;
     position: absolute;
@@ -303,9 +306,12 @@
   }
 }
 
-.product-other__wrapper {
+.product-other__item-border-bottom {
+  @media (min-width: @tablet-width) {
+    border-bottom: 1px solid #cdcdcd;
+  }
+
   @media (min-width: @desktop-width) {
-    display: flex;
-    justify-content: space-between;
+    border-bottom: none;
   }
 }
