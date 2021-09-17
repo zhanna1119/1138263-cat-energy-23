@@ -1,0 +1,14 @@
+.input-icon {
+  position: absolute;
+  top: 16px;
+  right: 14px;
+  fill: #666666;
+}
+
+.input:invalid + .input-icon {
+  fill: @error;
+}
+
+.input:focus + .input-icon {
+  fill: @primary;
+}
