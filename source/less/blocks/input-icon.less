@@ -1,14 +1,31 @@
 .input-icon {
+  fill: none;
   position: absolute;
   top: 16px;
   right: 14px;
-  fill: #666666;
 }
 
-.input:invalid + .input-icon {
+.input-icon--phone {
+  fill: #111111;
+}
+
+.input:invalid + .input-icon--phone {
   fill: @error;
 }
 
-.input:focus + .input-icon {
+.input:focus + .input-icon--phone {
   fill: @primary;
 }
+
+.input-icon--email {
+  stroke: #222222;
+}
+
+.input:invalid + .input-icon--email {
+  stroke: @error;
+}
+
+.input:focus + .input-icon--email {
+  stroke: @primary;
+}
+

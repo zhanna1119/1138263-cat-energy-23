@@ -1,3 +1,11 @@
+.form__fieldset-container {
+  @media (min-width: @desktop-width) {
+    margin: 0 auto;
+    max-width: 1220px;
+    padding: 0 30px;
+  }
+}
+
 .form__title {
   font-size: 36px;
   line-height: 36px;
@@ -41,6 +49,8 @@
 }
 
 .form__subtitle {
+  display: block;
+  font-weight: 400;
   box-sizing: content-box;
   padding-left: 20px;
   padding-right: 20px;
@@ -53,6 +63,7 @@
 
 
   @media (min-width: @tablet-width) {
+    width: max-content;
     font-size: 36px;
     line-height: 36px;
     margin-left: 40px;
